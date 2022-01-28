@@ -1,0 +1,26 @@
+msgid ""
+msgstr ""
+"Language: de_DE\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: src/demo.js:78
+msgid "Hello World"
+msgstr "Hallo Welt"
+
+#: src/demo.js:91
+#: src/demo.js:92
+msgid "1 child"
+msgid_plural "%s children"
+msgstr[0] "1 Kind"
+msgstr[1] "%s Kinder"
+
+#: src/demo.js:83
+msgctxt "money"
+msgid "Amount"
+msgstr "Betrag"
+
+#: src/demo.js:84
+msgctxt "count"
+msgid "Amount"
+msgstr "Menge"

@@ -1,0 +1,42 @@
+{
+    "name": "@lxg/l10n-demo",
+    "version": "1.0.0",
+    "description": "Playground to demonstrate localisation with the @lxg/l10n library",
+    "scripts": {
+        "dev": "npm-run-all --parallel dev:*",
+        "dev:js": "npx rollup -c -w",
+        "dev:html": "npx browser-sync start --server dist --cors --port 8081 --watch --files 'src/*' --no-open --no-ui"
+    },
+    "dependencies": {
+        "@lxg/l10n": "^2.4.0",
+        "@rollup/plugin-json": "^4.1.0",
+        "@rollup/plugin-node-resolve": "^13.1.3",
+        "browser-sync": "^2.27.7",
+        "npm-run-all": "^4.1.5",
+        "rollup": "^2.66.1",
+        "rollup-plugin-copy": "^3.4.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/lxg/l10n.git"
+    },
+    "author": {
+        "name": "Alexander Günsche",
+        "url": "https://lxg.de/"
+    },
+    "license": "ISC",
+    "l10n": {
+        "instance": "this._l10n",
+        "locales": [
+            "de-DE"
+        ],
+        "sources": [
+            "src/*.js"
+        ],
+        "targets": {
+            "src/translations.json": [
+                "src/*.js"
+            ]
+        }
+    }
+}

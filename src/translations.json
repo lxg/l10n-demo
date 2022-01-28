@@ -1,0 +1,14 @@
+{
+  "de-DE": {
+    "p": "(n != 1)",
+    "t": {
+      "Hello World": "Hallo Welt",
+      "1 child": [
+        "1 Kind",
+        "%s Kinder"
+      ],
+      "money\u0004Amount": "Betrag",
+      "count\u0004Amount": "Menge"
+    }
+  }
+}
