@@ -35,7 +35,7 @@ customElements.define('l10n-demo', class extends HTMLElement {
                 .main {
                     all: initial;
                     display: block;
-                    padding: 10px;
+                    width: 100%;
                 }
 
                 h1 {
@@ -43,13 +43,15 @@ customElements.define('l10n-demo', class extends HTMLElement {
                 }
 
                 table {
-                    border-collapse: collapse
+                    border-collapse: collapse;
+                    width: 100%;
                 }
 
                 th, td {
+                    background: #fff;
                     text-align: left;
                     border: 1px solid #ccc;
-                    padding: 1rem 2rem;
+                    padding: 0.6rem 1rem;
                     vertical-align: top;
                     white-space: nowrap
                 }
@@ -65,6 +67,21 @@ customElements.define('l10n-demo', class extends HTMLElement {
                 td:nth-child(4) {
                     white-space: normal
                 }
+
+                p {
+                    display: flex;
+                    align-items: center;
+                    margin: 1rem 0 0;
+                }
+
+                p span {
+                    display: block;
+                    margin-right: 1rem;
+                }
+
+                p button {
+                    margin-left: 0.3rem;
+                }
             </style>
 
             <div class="main">
@@ -72,19 +89,19 @@ customElements.define('l10n-demo', class extends HTMLElement {
                     <tr>
                         <th>Type</th>
                         <th>Demo</th>
-                        <th>Source</th>
+                        <th>Code</th>
                     </tr>
                     <tr>
                         <td>Simple</td>
                         <td>${this._l10n.t("Hello World")}</td>
-                        <td>this._l10n.t("Hello World")</td>
+                        <td>l10n.t("Hello World")</td>
                     </tr>
                     <tr>
                         <td>Context</td>
                         <td>${this._l10n.x("money", "Amount")}<br>
                             ${this._l10n.x("count", "Amount")}</td>
-                        <td>this._l10n.x("money", "Amount")<br>
-                            this._l10n.x("count", "Amount")</td>
+                        <td>l10n.x("money", "Amount")<br>
+                            l10n.x("count", "Amount")</td>
                     </tr>
                     <tr>
                         <td>Plurals</td>
@@ -93,16 +110,16 @@ customElements.define('l10n-demo', class extends HTMLElement {
                         <td>
                             const one = 1<br>
                             const more = 5<br>
-                            this._l10n.n("1 child", "%s children", one).replace("%s", one)<br>
-                            this._l10n.n("1 child", "%s children", more).replace("%s", more)</td>
+                            l10n.n("1 child", "%s children", one).replace("%s", one)<br>
+                            l10n.n("1 child", "%s children", more).replace("%s", more)</td>
                     </tr>
                     <tr>
                         <td>Dates</td>
                         <td>${this._l10n.t("Today is %s.").replace("%s", this._l10nDateFormat.fmt(new Date(), this._l10n.t("l, j F Y")))}</td>
-                        <td>const today = new Date()<br>
+                        <td>const date = new Date()<br>
                             const format = l10n.t("F j, Y")<br>
-                            const localisedDate = formatter.fmt(today, format)<br>
-                            const message = l10n.t("Today is %s.").replace("%s", localisedDate)</td>
+                            const today = formatter.fmt(date, format)<br>
+                            const message = l10n.t("Today is %s.").replace("%s", today)</td>
                     </tr>
                 </table>
             </div>
@@ -114,8 +131,8 @@ customElements.define('l10n-demo', class extends HTMLElement {
             </p>
         `
 
-            this._shadow.querySelectorAll("button").forEach(elem => elem.addEventListener("click", ev => {
-                this.lang = ev.target.lang
-            }))
+        this._shadow.querySelectorAll("button").forEach(elem => elem.addEventListener("click", ev => {
+            this.lang = ev.target.lang
+        }))
     }
 })
