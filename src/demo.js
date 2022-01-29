@@ -1,4 +1,5 @@
 import L10n from "@lxg/l10n"
+import { L10nDateFormat }  from "@lxg/l10n/date"
 import translations from './translations.json'
 
 customElements.define('l10n-demo', class extends HTMLElement {
@@ -10,8 +11,9 @@ customElements.define('l10n-demo', class extends HTMLElement {
         super()
         this._shadow = this.attachShadow({ mode: "open" })
         this._l10n = new L10n(translations)
-
+        this._l10nDateFormat = new L10nDateFormat(this._l10n)
     }
+
     attributeChangedCallback(name, oldValue, newValue) {
         if (name === "lang") {
             this._l10n.setLocale(newValue)
@@ -93,6 +95,14 @@ customElements.define('l10n-demo', class extends HTMLElement {
                             const more = 5<br>
                             this._l10n.n("1 child", "%s children", one).replace("%s", one)<br>
                             this._l10n.n("1 child", "%s children", more).replace("%s", more)</td>
+                    </tr>
+                    <tr>
+                        <td>Dates</td>
+                        <td>${this._l10n.t("Today is %s.").replace("%s", this._l10nDateFormat.fmt(new Date(), this._l10n.t("l, j F Y")))}</td>
+                        <td>const today = new Date()<br>
+                            const format = l10n.t("F j, Y")<br>
+                            const localisedDate = formatter.fmt(today, format)<br>
+                            const message = l10n.t("Today is %s.").replace("%s", localisedDate)</td>
                     </tr>
                 </table>
             </div>

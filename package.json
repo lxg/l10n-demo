@@ -35,7 +35,12 @@
         ],
         "targets": {
             "src/translations.json": [
-                "src/*.js"
+                "src/*.js",
+                "l10n:date:firstday",
+                "l10n:date:daysShort",
+                "l10n:date:days",
+                "l10n:date:monthsShort",
+                "l10n:date:months"
             ]
         }
     }

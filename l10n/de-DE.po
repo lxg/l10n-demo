@@ -8,12 +8,20 @@ msgstr ""
 msgid "Hello World"
 msgstr "Hallo Welt"
 
+#: src/demo.js:90
 #: src/demo.js:91
-#: src/demo.js:92
 msgid "1 child"
 msgid_plural "%s children"
 msgstr[0] "1 Kind"
 msgstr[1] "%s Kinder"
+
+#: src/demo.js:100
+msgid "Today is %s."
+msgstr "Heute ist %s."
+
+#: src/demo.js:100
+msgid "l, j F Y"
+msgstr "l, j. F Y"
 
 #: src/demo.js:83
 msgctxt "money"
