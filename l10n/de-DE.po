@@ -4,31 +4,31 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: src/demo.js:78
+#: src/demo.js:96
 msgid "Hello World"
 msgstr "Hallo Welt"
 
-#: src/demo.js:90
-#: src/demo.js:91
+#: src/demo.js:108
+#: src/demo.js:109
 msgid "1 child"
 msgid_plural "%s children"
 msgstr[0] "1 Kind"
 msgstr[1] "%s Kinder"
 
-#: src/demo.js:100
+#: src/demo.js:118
 msgid "Today is %s."
 msgstr "Heute ist %s."
 
-#: src/demo.js:100
+#: src/demo.js:118
 msgid "l, j F Y"
 msgstr "l, j. F Y"
 
-#: src/demo.js:83
+#: src/demo.js:101
 msgctxt "money"
 msgid "Amount"
 msgstr "Betrag"
 
-#: src/demo.js:84
+#: src/demo.js:102
 msgctxt "count"
 msgid "Amount"
 msgstr "Menge"

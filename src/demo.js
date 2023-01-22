@@ -117,7 +117,7 @@ customElements.define('l10n-demo', class extends HTMLElement {
                         <td>Dates</td>
                         <td>${this._l10n.t("Today is %s.").replace("%s", this._l10nDateFormat.fmt(new Date(), this._l10n.t("l, j F Y")))}</td>
                         <td>const date = new Date()<br>
-                            const format = l10n.t("F j, Y")<br>
+                            const format = l10n.t("l, j F Y")<br>
                             const today = formatter.fmt(date, format)<br>
                             const message = l10n.t("Today is %s.").replace("%s", today)</td>
                     </tr>
