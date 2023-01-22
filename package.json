@@ -8,7 +8,7 @@
         "dev:html": "npx browser-sync start --server dist --cors --port 8081 --watch --files 'src/*' --no-open --no-ui"
     },
     "dependencies": {
-        "@lxg/l10n": "^2.4.0",
+        "@lxg/l10n": "^2.6.0",
         "@rollup/plugin-json": "^4.1.0",
         "@rollup/plugin-node-resolve": "^13.1.3",
         "browser-sync": "^2.27.7",
@@ -25,7 +25,7 @@
         "url": "https://lxg.de/"
     },
     "license": "ISC",
-    "l10n": {
+    "@lxg/l10n": {
         "instance": "this._l10n",
         "locales": [
             "de-DE"
